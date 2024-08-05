@@ -1,0 +1,91 @@
+.masonry-img {
+  border-radius: 8px;
+  width: 310px;
+  margin-bottom: 20px;
+  break-inside: avoid;
+}
+
+.masonry-img:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+}
+
+.background-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-image: url('/hero-background-img.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(60%);
+  z-index: -1;
+}
+
+.btn-class {
+  position: relative;
+  width: 100%;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50px !important;
+}
+
+.btn-class::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/animals.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(60%);
+  z-index: -1;
+  transition: filter 0.3s;
+}
+
+.btn-class:hover::before {
+  filter: brightness(40%);
+}
+
+.art-btn::before {
+  background-image: url('/art.jpg') !important;
+}
+
+.food-btn::before {
+  background-image: url('/food.jpg') !important;
+}
+
+.quotes-btn::before {
+  background-image: url('/quotes.jpg') !important;
+}
+
+.mygrid {
+  columns: 4;
+  column-gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .mygrid {
+    columns: 3;
+  }
+}
+
+@media (max-width: 425px) {
+  .mygrid {
+    columns: 2;
+  }
+}
